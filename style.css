@@ -33,3 +33,11 @@ h1 {
     text-decoration: none;
     margin: 0px auto;
 }
+
+#work_display {
+    color: green;
+}
+
+#pause_display {
+    color: red;
+}
