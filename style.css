@@ -29,9 +29,13 @@ h1 {
     text-align: center;
 }
 
-#button {
+#reset, #start {
     text-decoration: none;
     margin: 0px auto;
+}
+
+#reset {
+    display: none;
 }
 
 #work_display {
