@@ -72,6 +72,8 @@ let onClickStart = () => {
     launch = true;
     buttonReset.style.display = 'block';
     buttonStart.style.display = 'none';
+    let timer = document.getElementById('contener_timer')
+    timer.style.display = 'inline-block';
 }
 
 /**
