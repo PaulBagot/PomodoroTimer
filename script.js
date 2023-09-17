@@ -35,3 +35,12 @@ let timeDisplay = () => {
     let secondeDisplay = secondes < 10 ? '0' + secondes : secondes;
     timer.textContent = minuteDisplay + ':' + secondeDisplay;
 }
+
+/**
+ * when you press the start button
+ */
+let onClickStart = () => {
+    launch = true;
+    buttonReset.style.display = 'block';
+    buttonStart.style.display = 'none';
+}
