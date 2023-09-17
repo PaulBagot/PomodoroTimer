@@ -18,6 +18,16 @@ buttonReset.addEventListener('click', () => {
 });
 
 /**
+ * main function
+ * @returns 
+ */
+let pomodoro = () => {
+    if(!launch) return;
+    decreaseCountdown();
+    timeDisplay();
+}
+
+/**
  * will decrease the time
  */
 let decreaseCountdown = () => {
@@ -51,3 +61,5 @@ let onClickStart = () => {
 let onClickReset = () => {
     location.reload();
 }
+
+setInterval(pomodoro, 1000);
