@@ -34,7 +34,26 @@ let decreaseCountdown = () => {
     if(!(minutes == 0 & secondes == 0)) {
         minutes = secondes == 0 ? minutes - 1 : minutes;
         secondes = secondes > 0 ? secondes - 1 : 59;
-    } 
+    } else
+        updateMode();   
+}
+
+/**
+ * will update the mode (work | pause)
+ * @returns 
+ */
+let updateMode = () => {
+    if(working) {
+        workDisplay.style.color = 'red';
+        pauseDisplay.style.color = 'green';
+        minutes = 5;
+    } else {
+        minutes = 25;
+        workDisplay.style.color = 'green';
+        pauseDisplay.style.color = 'red';
+    }
+    working = working ? false : true;
+    secondes = 0;
 }
 
 /**
