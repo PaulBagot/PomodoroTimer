@@ -44,3 +44,10 @@ let onClickStart = () => {
     buttonReset.style.display = 'block';
     buttonStart.style.display = 'none';
 }
+
+/**
+ * when you press the reset button
+ */
+let onClickReset = () => {
+    location.reload();
+}
