@@ -6,8 +6,10 @@ let pauseDisplay = document.getElementById('pause_display');
 
 let working = true;
 let launch = false;
-let minutes = 25;
-let secondes = 0;
+let minutes = 0;
+let secondes = 5;
+let workColor = '#CD5C5C';
+let pauseColor = '#6B8E23';
 
 buttonStart.addEventListener('click', () => {
     onClickStart();
@@ -44,13 +46,11 @@ let decreaseCountdown = () => {
  */
 let updateMode = () => {
     if(working) {
-        workDisplay.style.color = 'red';
-        pauseDisplay.style.color = 'green';
         minutes = 5;
+        document.body.style.backgroundColor = pauseColor;
     } else {
+        document.body.style.backgroundColor = workColor;
         minutes = 25;
-        workDisplay.style.color = 'green';
-        pauseDisplay.style.color = 'red';
     }
     working = working ? false : true;
     secondes = 0;
@@ -70,9 +70,12 @@ let timeDisplay = () => {
  */
 let onClickStart = () => {
     launch = true;
+    workDisplay.style.color = pauseColor;
+    pauseDisplay.style.color = workColor;
     buttonReset.style.display = 'block';
     buttonStart.style.display = 'none';
-    let timer = document.getElementById('contener_timer')
+    let timer = document.getElementById('contener_timer');
+    document.body.style.backgroundColor = workColor;
     timer.style.display = 'inline-block';
 }
 
