@@ -18,3 +18,12 @@ let decreaseCountdown = () => {
         secondes = secondes > 0 ? secondes - 1 : 59;
     } 
 }
+
+/**
+ * display the time
+ */
+let timeDisplay = () => {
+    let minuteDisplay = minutes < 10 ? '0' + minutes : minutes;
+    let secondeDisplay = secondes < 10 ? '0' + secondes : secondes;
+    timer.textContent = minuteDisplay + ':' + secondeDisplay;
+}
