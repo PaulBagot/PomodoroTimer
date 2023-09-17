@@ -9,6 +9,14 @@ let launch = false;
 let minutes = 25;
 let secondes = 0;
 
+buttonStart.addEventListener('click', () => {
+    onClickStart();
+});
+
+buttonReset.addEventListener('click', () => {
+    onClickReset();
+});
+
 /**
  * will decrease the time
  */
