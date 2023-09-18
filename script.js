@@ -6,8 +6,9 @@ let pauseDisplay = document.getElementById('pause_display');
 
 let working = true;
 let launch = false;
-let minutes = 0;
-let secondes = 5;
+let minutes = 25;
+let secondes = 0;
+let numberCicle = 0;
 let workColor = '#CD5C5C';
 let pauseColor = '#6B8E23';
 
@@ -46,7 +47,11 @@ let decreaseCountdown = () => {
  */
 let updateMode = () => {
     if(working) {
-        minutes = 5;
+        numberCicle++;
+        if(numberCicle % 4 == 0)
+            minutes = 20;
+        else
+            minutes = 5;
         document.body.style.backgroundColor = pauseColor;
     } else {
         document.body.style.backgroundColor = workColor;
