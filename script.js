@@ -9,6 +9,7 @@ let pauseDisplay = document.getElementById('pause_display');
 
 let workInput = document.getElementById('work_input');
 let pauseInput = document.getElementById('pause_input');
+let longPauseInput = document.getElementById('long_pause_input');
 
 const inputs = [workInput, pauseInput];
 
@@ -108,6 +109,7 @@ workInput.addEventListener('change', (event) => {
     launch = false;
     buttonReset.style.display = 'none';
     buttonStart.style.display = 'block';
+    timeDisplay();
 });
 
 pauseInput.addEventListener('change', (event) => {
@@ -118,10 +120,21 @@ pauseInput.addEventListener('change', (event) => {
     launch = false;
     buttonReset.style.display = 'none';
     buttonStart.style.display = 'block';
+    timeDisplay();
 });
 
+longPauseInput.addEventListener('change', (event) => {
+    longPauseMinutes = longPauseInput.value
+    if(!working && numberCicle % 4 == 0)
+        minutes = longPauseMinutes;
+    secondes = 0;
+    launch = false;
+    buttonReset.style.display = 'none';
+    buttonStart.style.display = 'block';
+    timeDisplay();
+});
 
-setInterval(pomodoro, 100);
+setInterval(pomodoro, 1000);
 
 /**
  * for loop for input listener
