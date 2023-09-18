@@ -31,7 +31,7 @@ h1 {
     font-size: 30px;
     font-weight: bold;
     margin: 20px;
-    display: none;
+    display: inline-block;
     border: 5px solid #F1F1F1;
     border-radius: 50%;
     min-width: 160px;
