@@ -10,6 +10,7 @@ let pauseDisplay = document.getElementById('pause_display');
 let workInput = document.getElementById('work_input');
 let pauseInput = document.getElementById('pause_input');
 
+const inputs = [workInput, pauseInput];
 
 let workMinutes = 25;
 let pauseMinutes = 5;
@@ -121,3 +122,16 @@ pauseInput.addEventListener('change', (event) => {
 
 
 setInterval(pomodoro, 100);
+
+/**
+ * for loop for input listener
+ * the inputs now can reseive only positif number
+ * 
+ */
+for(let resultat of inputs) {
+    resultat.addEventListener('input', () => {
+        let inputValue = resultat.value.match(/^\d+$/);
+        if (inputValue === null || Number.parseInt(inputValue) < 0) {
+            resultat.value = "";
+        }
+})}
