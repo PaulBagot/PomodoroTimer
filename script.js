@@ -58,7 +58,7 @@ let updateMode = () => {
     if(working) {
         numberCicle++;
         if(numberCicle % 4 == 0)
-            minutes = pauseMinutes + 15;
+            minutes = 20;
         else
             minutes = pauseMinutes;
         document.body.style.backgroundColor = pauseColor;
@@ -99,7 +99,19 @@ let onClickReset = () => {
 }
 
 workInput.addEventListener('change', (event) => {
-    minutes = workInput.value
+    workMinutes = workInput.value
+    if(working)
+        minutes = workMinutes;
+    secondes = 0;
+    launch = false;
+    buttonReset.style.display = 'none';
+    buttonStart.style.display = 'block';
+})
+
+pauseInput.addEventListener('change', (event) => {
+    pauseMinutes = pauseInput.value
+    if(!working)
+        minutes = pauseMinutes;
     secondes = 0;
     launch = false;
     buttonReset.style.display = 'none';
@@ -107,4 +119,4 @@ workInput.addEventListener('change', (event) => {
 })
 
 
-setInterval(pomodoro, 1000);
+setInterval(pomodoro, 100);
