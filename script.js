@@ -9,8 +9,8 @@ let launch = false;
 let minutes = 25;
 let secondes = 0;
 let numberCicle = 0;
-let workColor = '#CD5C5C';
-let pauseColor = '#6B8E23';
+let workColor = '#ff6666';
+let pauseColor = '#32cd32';
 
 buttonStart.addEventListener('click', () => {
     onClickStart();
