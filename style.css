@@ -64,9 +64,13 @@ h1 {
 }
 
 #work_display {
-    color: green;
+    color: red;
 }
 
 #pause_display {
-    color: red;
+    color: green;
+}
+
+#form {
+    margin-top: 25px;
 }

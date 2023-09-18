@@ -2,6 +2,7 @@ let buttonStart = document.getElementById('start');
 let buttonReset = document.getElementById('reset');
 
 let timer = document.getElementById('timer');
+let containerTimer = document.getElementById('contener_timer');
 
 let workDisplay = document.getElementById('work_display');
 let pauseDisplay = document.getElementById('pause_display');
@@ -12,6 +13,7 @@ let pauseInput = document.getElementById('pause_input');
 
 let workMinutes = 25;
 let pauseMinutes = 5;
+let longPauseMinutes = 20;
 
 let working = true;
 let launch = false;
@@ -43,7 +45,7 @@ let pomodoro = () => {
  * will decrease the time
  */
 let decreaseCountdown = () => {
-    if(!(minutes == 0 & secondes == 0)) {
+    if(!(minutes == 0 && secondes == 0)) {
         minutes = secondes == 0 ? minutes - 1 : minutes;
         secondes = secondes > 0 ? secondes - 1 : 59;
     } else
@@ -58,12 +60,12 @@ let updateMode = () => {
     if(working) {
         numberCicle++;
         if(numberCicle % 4 == 0)
-            minutes = 20;
+            minutes = longPauseMinutes;
         else
             minutes = pauseMinutes;
-        document.body.style.backgroundColor = pauseColor;
+        containerTimer.style.backgroundColor = pauseColor;
     } else {
-        document.body.style.backgroundColor = workColor;
+        containerTimer.style.backgroundColor = workColor;
         minutes = workMinutes;
     }
     working = working ? false : true;
@@ -84,9 +86,8 @@ let timeDisplay = () => {
  */
 let onClickStart = () => {
     launch = true;
-    workDisplay.style.color = pauseColor;
-    pauseDisplay.style.color = workColor;
-    document.body.style.backgroundColor = workColor;
+    if(working)
+        containerTimer.style.backgroundColor = workColor
     buttonReset.style.display = 'block';
     buttonStart.style.display = 'none';
 }
@@ -106,17 +107,17 @@ workInput.addEventListener('change', (event) => {
     launch = false;
     buttonReset.style.display = 'none';
     buttonStart.style.display = 'block';
-})
+});
 
 pauseInput.addEventListener('change', (event) => {
     pauseMinutes = pauseInput.value
-    if(!working)
+    if(!working && numberCicle % 4 != 0)
         minutes = pauseMinutes;
     secondes = 0;
     launch = false;
     buttonReset.style.display = 'none';
     buttonStart.style.display = 'block';
-})
+});
 
 
 setInterval(pomodoro, 100);
