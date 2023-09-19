@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body {
-    background-color: rgb(243, 173, 93);
-    color: #F1F1F1;
+    background-color: #2375d1;
+    color: #FFFFFF;
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
@@ -15,24 +15,24 @@ h1 {
 #display {
     width: 200px;
     margin: 0px auto;
-    border-bottom: 5px #F1F1F1 solid;
+    border-bottom: 5px #FFFFFF solid;
     text-align: center;
     padding: 5px;
 }
 
-#display > p{
-    font-size: 30px;
+#display > h2{
+    font-size: 35px;
     display: inline;
     padding: 10px;
 }
 
 #contener_timer {
-    background-color: rgb(243, 173, 93);
+    background-color: #ad5c00;
     font-size: 30px;
     font-weight: bold;
     margin: 20px;
     display: inline-block;
-    border: 5px solid #F1F1F1;
+    border: 5px solid #FFFFFF;
     border-radius: 50%;
     min-width: 160px;
     min-height: 160px;
@@ -56,19 +56,10 @@ h1 {
     border: none;
     text-decoration: none;
     margin: 0px auto;
-    color: #F1F1F1;
 }
 
 #reset {
     display: none;
-}
-
-#work_display {
-    color: red;
-}
-
-#pause_display {
-    color: green;
 }
 
 #form {
@@ -78,4 +69,13 @@ h1 {
 #form input {
     font-size: 23px;
     margin-top: 10px;
+    display: block;
+    margin: 0px auto;
+    width: 250px;
+}
+
+#form label {
+    display: block;
+    color: #FFFFFF;
+    font-weight: bold;
 }

@@ -9,26 +9,28 @@
 <body>
     <h1>Pomodoro Timer</h1>
     <div id="display">
-        <p id="work_display">Work</p>
-        <p id="pause_display">Pause</p>
+        <h2 id="mode_display">Work</h2>
     </div>
     <div id="contener_timer">
-        <p id="timer">25:00</p>
+        <h2 id="timer">25:00</h2>
     </div>
     <div id="contener_button">
-        <button id="start"><em class="fa-solid fa-play"></em></button>
-        <button id="reset"><em class="fa-solid fa-arrow-rotate-right"></em></button>
+        <em id="start" class="fa-solid fa-play"></em>
+        <em id="reset" class="fa-solid fa-arrow-rotate-right"></em>
     </div>
 
     <form id="form">
         <div>
-            <input placeholder="work time" type="number" id="work_input" min="1" required>
+            <label for="work_input">work time (minutes)</label>
+            <input placeholder="25" type="number" id="work_input" min="1" required>
         </div>
         <div>
-            <input placeholder="pause time" type="number" id="pause_input" min="1" required>
+            <label for="pause_input">pause time (minutes)</label>
+            <input placeholder="5" type="number" id="pause_input" min="1" required>
         </div>
         <div>
-            <input placeholder="long pause time" type="number" id="long_pause_input" min="1" required>
+            <label for="long_pause_input">long pause time (minutes)</label>
+            <input placeholder="20" type="number" id="long_pause_input" min="1" required>
         </div>
     </form>
     <script src="./script.js"></script>

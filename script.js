@@ -4,8 +4,7 @@ let buttonReset = document.getElementById('reset');
 let timer = document.getElementById('timer');
 let containerTimer = document.getElementById('contener_timer');
 
-let workDisplay = document.getElementById('work_display');
-let pauseDisplay = document.getElementById('pause_display');
+let modeDisplay = document.getElementById('mode_display');
 
 let workInput = document.getElementById('work_input');
 let pauseInput = document.getElementById('pause_input');
@@ -24,8 +23,8 @@ let minutes = workMinutes;
 let secondes = 0;
 let numberCicle = 0;
 
-let workColor = '#ff6666';
-let pauseColor = '#32cd32';
+let workColor = '#c93636';
+let pauseColor = '#447e44';
 
 buttonStart.addEventListener('click', () => {
     onClickStart();
@@ -67,8 +66,10 @@ let updateMode = () => {
             minutes = longPauseMinutes;
         else
             minutes = pauseMinutes;
+        modeDisplay.textContent = "Pause";
         containerTimer.style.backgroundColor = pauseColor;
     } else {
+        modeDisplay.textContent = "Work";
         containerTimer.style.backgroundColor = workColor;
         minutes = workMinutes;
     }
