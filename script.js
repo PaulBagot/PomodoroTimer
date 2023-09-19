@@ -1,15 +1,5 @@
 let buttonStart = document.getElementById('start');
 let buttonReset = document.getElementById('reset');
-<<<<<<< HEAD
-let timer = document.getElementById('timer');
-let workDisplay = document.getElementById('work_display');
-let pauseDisplay = document.getElementById('pause_display');
-
-let working = true;
-let launch = false;
-let minute = 25;
-let seconde = 0;
-=======
 
 let timer = document.getElementById('timer');
 let containerTimer = document.getElementById('contener_timer');
@@ -35,7 +25,6 @@ let numberCicle = 0;
 
 let workColor = '#c93636';
 let pauseColor = '#447e44';
->>>>>>> version2
 
 buttonStart.addEventListener('click', () => {
     onClickStart();
@@ -46,32 +35,6 @@ buttonReset.addEventListener('click', () => {
 });
 
 /**
-<<<<<<< HEAD
- * main function where the time will decrease
- */
-let decreaseCountdown = () => {
-    if(!launch) return;
-
-    if(minute >= 0) {
-        if(!(minute == 0 & seconde == 0)) {
-            minute = seconde == 0 ? minute - 1 : minute;
-            seconde = seconde > 0 ? seconde - 1 : 59;
-        } else
-            updateMode();
-        timeDisplay();
-    }
-    
-}
-
-let timeDisplay = () => {
-    let minuteDisplay = minute < 10 ? '0' + minute : minute;
-    let secondeDisplay = seconde < 10 ? '0' + seconde : seconde;
-    timer.textContent = minuteDisplay + ':' + secondeDisplay;
-}
-
-/**
- * 
-=======
  * main function
  * @returns 
  */
@@ -94,28 +57,10 @@ let decreaseCountdown = () => {
 
 /**
  * will update the mode (work | pause)
->>>>>>> version2
  * @returns 
  */
 let updateMode = () => {
     if(working) {
-<<<<<<< HEAD
-        workDisplay.style.color = 'red';
-        pauseDisplay.style.color = 'green';
-        minute = 5;
-    } else {
-        minute = 25;
-        workDisplay.style.color = 'green';
-        pauseDisplay.style.color = 'red';
-    }
-    working = working ? false : true;
-    seconde = 0;
-}
-
-
-let onClickStart = () => {
-    launch = true;
-=======
         numberCicle++;
         if(numberCicle % 4 == 0)
             minutes = longPauseMinutes;
@@ -148,24 +93,17 @@ let onClickStart = () => {
     launch = true;
     if(working)
         containerTimer.style.backgroundColor = workColor
->>>>>>> version2
     buttonReset.style.display = 'block';
     buttonStart.style.display = 'none';
 }
 
-<<<<<<< HEAD
-=======
 /**
  * when you press the reset button
  */
->>>>>>> version2
 let onClickReset = () => {
     location.reload();
 }
 
-<<<<<<< HEAD
-setInterval(decreaseCountdown, 1000);
-=======
 workInput.addEventListener('change', (event) => {
     workMinutes = workInput.value
     if(working)
@@ -213,4 +151,3 @@ for(let resultat of inputs) {
             resultat.value = "";
         }
 })}
->>>>>>> version2
