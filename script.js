@@ -1,7 +1,6 @@
-let buttonStart = document.getElementById('start');
 let buttonReset = document.getElementById('reset');
+let buttonStart = document.getElementById('start');
 
-let timer = document.getElementById('timer');
 let containerTimer = document.getElementById('contener_timer');
 
 let modeDisplay = document.getElementById('mode_display');
