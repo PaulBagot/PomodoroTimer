@@ -92,6 +92,10 @@ footer p {
     margin: 5px;
 }
 
+footer a {
+    color: #6cb0ff;
+}
+
 @media only screen and (min-width: 768px) {
     body {
         height: 830px;
