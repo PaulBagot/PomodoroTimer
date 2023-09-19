@@ -19,8 +19,10 @@ to see the page click [here](https://paulbagot.github.io/PomodoroTimer/)
 * an other button to reset the application
 
 When you want to have other minutes than the    
-default ones you must ***press enter***.
+default ones you must ***press enter***.  
 
+If you type a number highter than 60 it will not be taken  
+and the default value will be taken
 
 ___
 Paul Bagot
