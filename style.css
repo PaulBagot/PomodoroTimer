@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body {
-    background-color: #2375d1;
+    background-color: #dd3131;
     color: #FFFFFF;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -27,7 +27,7 @@ h1 {
 }
 
 #contener_timer {
-    background-color: #ad5c00;
+    background-color: #2375d1;
     font-size: 30px;
     font-weight: bold;
     margin: 20px;
@@ -78,12 +78,4 @@ h1 {
     display: block;
     color: #FFFFFF;
     font-weight: bold;
-}
-
-@media screen and (max-width: 767px) {
-
-}
-
-@media screen and (max-width: 768px) and (max-width: 1023px) {
-
 }
