@@ -1,27 +1,51 @@
+<<<<<<< HEAD
 body {
     background-color: rgb(199,1,26);
     color: #F1F1F1;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    background-color: #2375d1;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+>>>>>>> version2
 }
 
 h1 {
     text-align: center;
+<<<<<<< HEAD
+=======
+    font-size: 50px;
+>>>>>>> version2
 }
 
 #display {
     width: 200px;
     margin: 0px auto;
+<<<<<<< HEAD
     border: 3px black solid;
     border-radius: 5px;
+=======
+    border-bottom: 5px #FFFFFF solid;
+>>>>>>> version2
     text-align: center;
     padding: 5px;
 }
 
+<<<<<<< HEAD
 #display > p{
+=======
+#display > h2{
+    font-size: 35px;
+>>>>>>> version2
     display: inline;
     padding: 10px;
 }
 
 #contener_timer {
+<<<<<<< HEAD
     text-align: center;
 }
 
@@ -30,6 +54,35 @@ h1 {
 }
 
 #reset, #start {
+=======
+    background-color: #ad5c00;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    display: inline-block;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    min-width: 160px;
+    min-height: 160px;
+    padding: 40px;
+    text-align: center;
+}
+
+#timer {
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+#contener_button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#reset, #start {
+    font-size: 50px;
+    background: none;
+    border: none;
+>>>>>>> version2
     text-decoration: none;
     margin: 0px auto;
 }
@@ -38,10 +91,29 @@ h1 {
     display: none;
 }
 
+<<<<<<< HEAD
 #work_display {
     color: green;
 }
 
 #pause_display {
     color: red;
+=======
+#form {
+    margin-top: 25px;
+}
+
+#form input {
+    font-size: 23px;
+    margin-top: 10px;
+    display: block;
+    margin: 0px auto;
+    width: 250px;
+}
+
+#form label {
+    display: block;
+    color: #FFFFFF;
+    font-weight: bold;
+>>>>>>> version2
 }
