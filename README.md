@@ -17,3 +17,5 @@ to see the page click [here](https://paulbagot.github.io/PomodoroTimer/)
 * and an other one to type how many break time you want for the big break
 * a button to start the application
 * an other button to reset the application
+___
+Paul Bagot
