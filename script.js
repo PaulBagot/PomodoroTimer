@@ -104,7 +104,7 @@ let onClickReset = () => {
 }
 
 workInput.addEventListener('change', (event) => {
-    if(workInput.value == "")
+    if(workInput.value == "" || workInput.value > 60)
         workMinutes = 25;
     else
         workMinutes = workInput.value
@@ -118,7 +118,7 @@ workInput.addEventListener('change', (event) => {
 });
 
 pauseInput.addEventListener('change', (event) => {
-    if(pauseInput.value == "")
+    if(pauseInput.value == "" || pauseInput.value > 60)
         pauseMinutes = 5;
     else
         pauseMinutes = pauseInput.value
@@ -132,7 +132,7 @@ pauseInput.addEventListener('change', (event) => {
 });
 
 longPauseInput.addEventListener('change', (event) => {
-    if(longPauseInput.value == "")
+    if(longPauseInput.value == "" || longPauseInput.value > 60)
         longPauseMinutes = 20;
     else
         longPauseMinutes = longPauseInput.value
