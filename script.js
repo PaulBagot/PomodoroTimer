@@ -11,17 +11,19 @@ let workInput = document.getElementById('work_input');
 let pauseInput = document.getElementById('pause_input');
 let longPauseInput = document.getElementById('long_pause_input');
 
-const inputs = [workInput, pauseInput];
-
 let workMinutes = 25;
 let pauseMinutes = 5;
 let longPauseMinutes = 20;
 
+const inputs = [workInput, pauseInput, longPauseInput];
+
 let working = true;
 let launch = false;
+
 let minutes = workMinutes;
 let secondes = 0;
 let numberCicle = 0;
+
 let workColor = '#ff6666';
 let pauseColor = '#32cd32';
 
