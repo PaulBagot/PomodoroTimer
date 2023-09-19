@@ -79,3 +79,42 @@ h1 {
     color: #FFFFFF;
     font-weight: bold;
 }
+
+footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #222222;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        height: 860px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        height: 720px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    #display > h2 {
+        font-size: 20px;
+    }
+    #form {
+        margin-top: 15px;
+    }
+    #form input {
+        font-size: 17px;
+    }
+    #reset, #start {
+        font-size: 35px;
+    }
+    #contener_button {
+        margin-top: 10px;
+    }
+
+}
